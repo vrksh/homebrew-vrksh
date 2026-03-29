@@ -11,7 +11,7 @@ class Vrk < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/vrksh/vrksh/releases/download/v0.1.0/vrk_0.1.0_darwin_amd64.tar.gz"
-      sha256 "933989d7c725b430cc72e2b38321736ec1686643feb0b092369a15d121ecc91c"
+      sha256 "9609f5f87f5556434c0ed04938c50e62c5ccdd71869833d5cac2d80e8df00e84"
 
       define_method(:install) do
         bin.install "vrk"
@@ -19,7 +19,7 @@ class Vrk < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/vrksh/vrksh/releases/download/v0.1.0/vrk_0.1.0_darwin_arm64.tar.gz"
-      sha256 "3f4bdff4366956fbe859cf6be8daf5f42dd5fb4663225c1ee602d0f1d8b3402f"
+      sha256 "46fed35aab5726fe3736cc15e19c786abdfa425d2cdbb61eb71b84988b5bed30"
 
       define_method(:install) do
         bin.install "vrk"
@@ -30,14 +30,14 @@ class Vrk < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/vrksh/vrksh/releases/download/v0.1.0/vrk_0.1.0_linux_amd64.tar.gz"
-      sha256 "ab932dae2156a882a268a0216d349c5e8e7ac70960b02b77d99421978f37dcc8"
+      sha256 "b9171116486f3faf509d79a20e0e311880b2f010a0bcb5e4439383cbea141dfa"
       define_method(:install) do
         bin.install "vrk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/vrksh/vrksh/releases/download/v0.1.0/vrk_0.1.0_linux_arm64.tar.gz"
-      sha256 "5cb351515a803761f96cbc85e8eed2ad18c2f26d68d180f85425cf8e8d118c1a"
+      sha256 "cafce3460c76fe54a63bdf03b23e9836f6f4f22cb8ad1fb2347b2ad9753cacdf"
       define_method(:install) do
         bin.install "vrk"
       end
