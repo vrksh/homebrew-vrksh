@@ -5,21 +5,21 @@
 class Vrk < Formula
   desc "Unix tools for building reliable AI pipelines"
   homepage "https://vrk.sh"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vrksh/vrksh/releases/download/v0.1.1/vrk_0.1.1_darwin_amd64.tar.gz"
-      sha256 "9d491498938b04108daeeb398a34fe725ef96349ebeb74db0662b9a9a296221d"
+      url "https://github.com/vrksh/vrksh/releases/download/v0.2.0/vrk_0.2.0_darwin_amd64.tar.gz"
+      sha256 "e648cde612eda0ad5343af20fd7d67648ba6aec9f22db9b70c57c6ac199024c1"
 
       define_method(:install) do
         bin.install "vrk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vrksh/vrksh/releases/download/v0.1.1/vrk_0.1.1_darwin_arm64.tar.gz"
-      sha256 "a1de3446aa9dd36612171f7910831b7ddbf76c01298a03dfe83eaebb3d122a75"
+      url "https://github.com/vrksh/vrksh/releases/download/v0.2.0/vrk_0.2.0_darwin_arm64.tar.gz"
+      sha256 "0e9e4190f8bb799a110048c0c4e0918ec13e1a1741b0ad18a5c008bb02cabde1"
 
       define_method(:install) do
         bin.install "vrk"
@@ -29,15 +29,15 @@ class Vrk < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vrksh/vrksh/releases/download/v0.1.1/vrk_0.1.1_linux_amd64.tar.gz"
-      sha256 "70bd1a3460cf943c8ae55a7156f803cd89788ffe8147e72deee71132d038c2fe"
+      url "https://github.com/vrksh/vrksh/releases/download/v0.2.0/vrk_0.2.0_linux_amd64.tar.gz"
+      sha256 "dc11faca7d288252fb5586140b0033945cf602644cf0ad5c3ba3191953ed6f18"
       define_method(:install) do
         bin.install "vrk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vrksh/vrksh/releases/download/v0.1.1/vrk_0.1.1_linux_arm64.tar.gz"
-      sha256 "a5ddc4617f51a9614648ef769d893c4c40859de91a4210631a23c6e5830c6b00"
+      url "https://github.com/vrksh/vrksh/releases/download/v0.2.0/vrk_0.2.0_linux_arm64.tar.gz"
+      sha256 "eae28c1bb0c65dd1a1c2d7d92979ecaf8d9e47edf4e86ca5cef35163c9e4f6c8"
       define_method(:install) do
         bin.install "vrk"
       end
